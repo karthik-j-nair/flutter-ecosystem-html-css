@@ -1,0 +1,783 @@
+@font-face {
+  font-family: font1;
+  src: url(./font1.woff2);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(./font2.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: font2;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@mixin flexCol($gapVal: 0rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gapVal;
+}
+
+nav {
+  width: 100%;
+  @include flexCol(0rem);
+  // align-items: center;
+  // justify-content: center;
+
+  .nav-part1 {
+    width: 100%;
+    height: 5.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #047cfd, #823ff3);
+    a {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #fff;
+    }
+  }
+
+  .nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw 6.5vw;
+
+    .nav1 {
+      img {
+        height: 2.2rem;
+      }
+    }
+    .nav2 {
+      display: none;
+    }
+    .nav3 {
+      a {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+section {
+  max-width: 2000px;
+}
+
+main {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  background: linear-gradient(to right top, #fcdde8 10%, #f3fcff 50%);
+  @include flexCol(4rem);
+  justify-content: space-between;
+  padding: 4rem 1.5rem;
+  .hero1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .hero-img {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .hero-heading {
+      // padding: 2rem 0;
+
+      h1 {
+        line-height: 1;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .hero2 {
+    p {
+      font-size: 2.1rem;
+      text-align: center;
+      line-height: 1.2;
+      font-family: font1;
+    }
+  }
+}
+
+.hero2 {
+  width: 100%;
+  @include flexCol(2rem);
+  padding: 4rem 1.5rem;
+
+  .divs {
+    width: 100%;
+    @include flexCol(1.8rem);
+    hr {
+      border: 0.17rem solid #e8eaed;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #000000c7;
+      width: 85%;
+    }
+
+    img {
+      width: 95%;
+    }
+  }
+}
+
+.hero3 {
+  width: 100%;
+  @include flexCol(2rem);
+  padding: 4rem 1.5rem;
+
+  .part1 {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .part2 {
+    @include flexCol(1rem);
+    h4 {
+      font-size: 1.2rem;
+      color: #000000c7;
+    }
+
+    h2 {
+      font-size: 3.1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #000000c7;
+      padding-bottom: 1rem;
+    }
+
+    .buttons {
+      @include flexCol(1rem);
+
+      #a1 {
+        width: fit-content;
+        color: #0468d7;
+        padding: 0.5rem 1.5rem;
+        border: 0.1rem solid #0468d7;
+        font-weight: 600;
+        border-radius: 5rem;
+        transition: all ease 0.3s;
+        cursor: pointer;
+      }
+
+      #a1:hover {
+        color: #fff;
+        background-color: #0468d7;
+      }
+
+      #a2 {
+        width: fit-content;
+        color: #000;
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+        transition: all ease 0.3s;
+        cursor: pointer;
+      }
+
+      #a2 i {
+        display: inline-block;
+        transition: transform 200ms ease;
+      }
+
+      #a2:hover i {
+        transform: translateX(3px);
+      }
+    }
+  }
+}
+
+.hero4 {
+  background: linear-gradient(to right top, #fcfce2, #f5fbfe);
+  width: 100%;
+  @include flexCol(2rem);
+  padding: 4rem 1.5rem;
+
+  .part1 {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .part2 {
+    @include flexCol(1rem);
+    h4 {
+      font-size: 1.2rem;
+      color: #000000c7;
+    }
+
+    h2 {
+      font-size: 3.1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #000000c7;
+      padding-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      @include flexCol(1rem);
+
+      a {
+        width: fit-content;
+        color: #fff;
+        background-color: #0468d7;
+        padding: 0.5rem 1.5rem;
+        border: 0.1rem solid #0468d7;
+        font-weight: 600;
+        border-radius: 5rem;
+        transition: all ease 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.hero5 {
+  width: 100%;
+  @include flexCol(2rem);
+  padding: 4rem 1.5rem;
+
+  .part1 {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .part2 {
+    @include flexCol(1rem);
+    h4 {
+      font-size: 1.2rem;
+      color: #000000c7;
+    }
+
+    h2 {
+      font-size: 3.1rem;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #000000c7;
+      padding-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      @include flexCol(1rem);
+
+      a {
+        width: fit-content;
+        color: #0468d7;
+        padding: 0.5rem 1.5rem;
+        border: 0.1rem solid #0468d7;
+        font-weight: 600;
+        border-radius: 5rem;
+        transition: all ease 0.3s;
+        cursor: pointer;
+      }
+
+      a:hover {
+        background-color: #0468d7;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.hero6 {
+  background: linear-gradient(to right top, #fcfce2, #f5fbfe);
+  width: 100%;
+  @include flexCol(2rem);
+  padding: 4rem 1.5rem;
+
+  .part1 {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .part2 {
+    @include flexCol(1rem);
+    h4 {
+      font-size: 1.2rem;
+      color: #000000c7;
+    }
+
+    h2 {
+      font-size: 3.1rem;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #000000c7;
+      padding-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      @include flexCol(1rem);
+
+      a {
+        width: fit-content;
+        color: #fff;
+        background-color: #0468d7;
+        padding: 0.5rem 1.5rem;
+        border: 0.1rem solid #0468d7;
+        font-weight: 600;
+        border-radius: 5rem;
+        transition: all ease 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.install-section {
+  width: 100%;
+  padding: 4rem 1.5rem;
+
+  .outer-div {
+    width: 100%;
+    // height: 50vh;
+    overflow: hidden;
+    background-color: #042449;
+    border-radius: 3rem;
+    position: relative;
+
+    img {
+      width: 140%;
+      height: 50vh;
+      object-fit: cover;
+    }
+
+    .install-details-div {
+      position: absolute;
+      inset: 0;
+      padding: 3.3rem;
+      color: #fff;
+      @include flexCol(1.5rem);
+      justify-content: center;
+
+      h5 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+
+      .buttons {
+        @include flexCol(1rem);
+
+        #a1 {
+          width: fit-content;
+          color: #0468d7;
+          background-color: #fff;
+          padding: 0.5rem 1.5rem;
+          border: 0.1rem solid #fff;
+          font-weight: 600;
+          border-radius: 5rem;
+          transition: all ease 0.3s;
+          cursor: pointer;
+        }
+
+        #a1:hover {
+          color: #fff;
+          background-color: #0468d7;
+        }
+
+        #a2 {
+          width: fit-content;
+          color: #fff;
+          padding: 0.5rem 1.5rem;
+          font-weight: 600;
+          transition: all ease 0.3s;
+          cursor: pointer;
+        }
+
+        #a2 i {
+          display: inline-block;
+          transition: transform 200ms ease;
+        }
+
+        #a2:hover i {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #F8F9FA;
+  padding: 4rem 2rem;
+}
+
+@media (min-width: 1025px) {
+  nav {
+    .nav-part1 {
+      height: 6.6vh;
+    }
+    .nav-part2 {
+      padding: 1.4vw 3.2vw;
+
+      .nav2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+
+        a {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: #000000c7;
+        }
+
+        a:hover {
+          color: #0468d7;
+        }
+
+        #get-started {
+          font-size: 0.95rem;
+          padding: 0.7rem 2rem;
+          border-radius: 6rem;
+          background-color: #0468d7;
+          color: #fff;
+        }
+      }
+      .nav3 {
+        display: none;
+      }
+    }
+  }
+
+  .hero {
+    gap: 7rem;
+    padding: 4rem 1.5rem;
+    .hero1 {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+
+      .hero-img {
+        width: 43%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .hero-heading {
+        width: 35%;
+
+        h1 {
+          font-size: 4.5rem;
+          text-align: left;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .hero2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 2.2rem;
+        width: 65%;
+      }
+    }
+  }
+
+  .hero2 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 1.5rem;
+
+    .divs {
+      width: 27%;
+      gap: 1.8rem;
+      hr {
+        border: 0.17rem solid #e8eaed;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  .hero3 {
+    flex-direction: row-reverse;
+    gap: 6rem;
+    align-items: center;
+    padding: 4rem 1.5rem;
+
+    .part1 {
+      width: 40%;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .part2 {
+      width: 40%;
+      @include flexCol(1rem);
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 3.8rem;
+      }
+
+      p {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
+
+      .buttons {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .hero4 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    padding: 4rem 1.5rem;
+
+    .part1 {
+      width: 40%;
+
+      img {
+        width: 85%;
+      }
+    }
+
+    .part2 {
+      width: 40%;
+      @include flexCol(1rem);
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 3.8rem;
+        line-height: 1;
+      }
+
+      p {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .hero5 {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 1.5rem;
+
+    .part1 {
+      width: 35%;
+
+      img {
+        width: 95%;
+      }
+    }
+
+    .part2 {
+      width: 40%;
+      @include flexCol(1rem);
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        width: 70%;
+        font-size: 3.8rem;
+        line-height: 1;
+      }
+
+      p {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .hero6 {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    padding: 4rem 1.5rem;
+
+    .part1 {
+      width: 40%;
+
+      img {
+        width: 85%;
+      }
+    }
+
+    .part2 {
+      width: 40%;
+      @include flexCol(1rem);
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 3.8rem;
+        line-height: 1;
+      }
+
+      p {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .install-section {
+    padding: 4rem 7rem;
+
+    .outer-div {
+      height: 45vh;
+
+      img {
+        width: 50%;
+        position: absolute;
+        right: -11%;
+      }
+
+      .install-details-div {
+        position: absolute;
+        inset: 0;
+        padding: 3.3rem;
+        color: #fff;
+        gap: 1rem;
+        justify-content: center;
+
+        h5 {
+          font-size: 3.5rem;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 1.1rem;
+          padding-bottom: 1rem;
+        }
+
+        .buttons {
+          flex-direction: row;
+
+          #a11 {
+            width: fit-content;
+            color: #0468d7;
+            background-color: #fff;
+            padding: 0.5rem 1.5rem;
+            border: 0.1rem solid #fff;
+            font-weight: 600;
+            border-radius: 5rem;
+            transition: all ease 0.3s;
+            cursor: pointer;
+          }
+
+          #a2 {
+            width: fit-content;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: all ease 0.3s;
+            cursor: pointer;
+          }
+
+          #a2 i {
+            display: inline-block;
+            transition: transform 200ms ease;
+          }
+
+          #a2:hover i {
+            transform: translateX(3px);
+          }
+        }
+      }
+    }
+  }
+
+
+}
